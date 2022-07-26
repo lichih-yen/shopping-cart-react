@@ -25,17 +25,17 @@ const Header = () => {
             style={{ width: 500 }}
             placeholder="Search a product"
             className="m-auto"
+            aria-label="Search"
           />
         </Navbar.Text>
 
         <Nav>
-          <Dropdown align-self-end>
+          <Dropdown alignRight>
             <Dropdown.Toggle variant="success">
               <RiShoppingCartFill color="white" fontSize="25px" />
-              <Badge>{Cart.length}</Badge>
+              <Badge>10</Badge>
             </Dropdown.Toggle>
-
-            <Dropdown.Menu style={{ minWidth: 370 }}>
+            <Dropdown.Menu style={{ minWidth: 370, marginLeft: "-278px" }}>
               <span style={{ padding: 10 }}>Cart is Empty!</span>
             </Dropdown.Menu>
           </Dropdown>
