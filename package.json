@@ -1,6 +1,10 @@
 {
-  "homepage": "https://lichih-yen.github.io/shopping-cart-react",
+  "homepage": "https://lichih-yen.github.io/shopping-cart-react/",
   "name": "shopping-cart",
+  "author": {
+    "name": "Li-Chih Yen",
+    "email": "l_yen@fanshaweonline.ca"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
