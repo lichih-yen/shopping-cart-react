@@ -8,13 +8,12 @@ import {
   Badge,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 import { RiShoppingCartFill } from "react-icons/ri";
 import Cart from "./Cart";
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
+    <Navbar className="ml-auto" bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
           <Link to="/">Shopping Cart</Link>
@@ -22,7 +21,7 @@ const Header = () => {
 
         <Navbar.Text className="search">
           <FormControl
-            style={{ width: 500 }}
+            style={{ width: 380 }}
             placeholder="Search a product"
             className="m-auto"
             aria-label="Search"
@@ -30,7 +29,7 @@ const Header = () => {
         </Navbar.Text>
 
         <Nav>
-          <Dropdown alignRight>
+          <Dropdown alignRight style={{ backgroud: "orange" }}>
             <Dropdown.Toggle variant="success">
               <RiShoppingCartFill color="white" fontSize="25px" />
               <Badge>10</Badge>
