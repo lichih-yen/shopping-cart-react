@@ -4,7 +4,7 @@ import Rating from "./Rating";
 
 const Filters = () => {
   const {
-    productState: { isStock, isFastDelivery, sort, byRating, searchQuery },
+    productState: { isStock, isFastDelivery, sort, byRating },
     productDispatch,
   } = CartState();
 
