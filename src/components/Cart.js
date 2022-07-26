@@ -49,8 +49,9 @@ const Cart = () => {
                       })
                     }
                   >
-                    {[...Array(prod.inStock).keys()].map((x) => (
-                      <option key={x + 1}>{x + 1}</option>
+                    {/* trun prod.inStock(string) to number */}
+                    {[...Array(parseInt(prod.inStock)).keys()].map((i) => (
+                      <option key={i + 1}>{i + 1}</option>
                     ))}
                   </Form.Control>
                 </Col>
