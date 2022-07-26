@@ -19,3 +19,28 @@ export const cartReducer = (state, action) => {
       return state;
   }
 };
+
+export const productReducer = (state, action) => {
+  switch (action.type) {
+    case "SORT_BY_PRICE":
+      return { ...state, sort: action.payload };
+    case "FILTER_BY_STOCK":
+      return { ...state, isStock: !state.isStock };
+    case "FILTER_BY_DELIVERY":
+      return { ...state, isFastDelivery: !state.isFastDelivery };
+    case "FILTER_BY_RATING":
+      return { ...state, byRating: action.payload };
+    case "FILTER_BY_SEARCH":
+      return { ...state, searchQuery: action.payload };
+    case "CLEAR_FILTERS":
+      return {
+        isStock: false,
+        isFastDelivery: false,
+        byRating: 0,
+        searchQuery: "",
+      };
+
+    default:
+      return state;
+  }
+};

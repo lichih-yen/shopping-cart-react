@@ -10,7 +10,6 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { RiShoppingCartFill } from "react-icons/ri";
-import Cart from "./Cart";
 import { CartState } from "../context/Context";
 import { AiFillDelete } from "react-icons/ai";
 
@@ -18,6 +17,7 @@ const Header = () => {
   const {
     state: { cart },
     dispatch,
+    productDispatch,
   } = CartState();
 
   return (
@@ -33,16 +33,22 @@ const Header = () => {
             placeholder="Search a product"
             className="m-auto"
             aria-label="Search"
+            onChange={(e) => {
+              productDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value,
+              });
+            }}
           />
         </Navbar.Text>
 
         <Nav>
-          <Dropdown>
+          <Dropdown align={{ sm: "right" }}>
             <Dropdown.Toggle variant="success">
               <RiShoppingCartFill color="white" fontSize="25px" />
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
-            <Dropdown.Menu style={{ minWidth: 370, marginLeft: "-278px" }}>
+            <Dropdown.Menu style={{ minWidth: 370 }}>
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
