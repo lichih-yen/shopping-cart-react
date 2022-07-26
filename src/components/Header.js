@@ -29,10 +29,10 @@ const Header = () => {
         </Navbar.Text>
 
         <Nav>
-          <Dropdown alignRight>
+          <Dropdown align-self-end>
             <Dropdown.Toggle variant="success">
               <RiShoppingCartFill color="white" fontSize="25px" />
-              <Badge> {Cart.length} </Badge>
+              <Badge>{Cart.length}</Badge>
             </Dropdown.Toggle>
 
             <Dropdown.Menu style={{ minWidth: 370 }}>
